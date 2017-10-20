@@ -13,8 +13,16 @@
     </head>
     <body class="container-fluid">
 
+      <form class="sign-in user-info">
+        <fieldset>
+          <input class='signin_email auth-input'type="text" name="credentials[email]" placeholder="Enter Email">
+          <input class='signin_pswd auth-input'type="password" name="credentials[password]" placeholder="Enter Password">
+          <input class='auth-button auth-input' type="submit" name="submit" value="Sign in!">
+        </fieldset>
+      </form>
+
       <h4 class='sign-in-as'></h4>
-      <h3 class='sign-in-play'>Please sign in to start reviewing.</h3>
+
       <form class="sign-up user-info">
         <fieldset>
           <div class='auth-header'>Sign Up!</div>
@@ -25,14 +33,6 @@
         </fieldset>
       </form>
 
-      <form class="sign-in user-info">
-        <fieldset>
-          <div class='auth-header'>Sign In!</div>
-          <input class='signin_email auth-input'type="text" name="credentials[email]" placeholder="Enter Email">
-          <input class='signin_pswd auth-input'type="password" name="credentials[password]" placeholder="Enter Password">
-          <input class='auth-button auth-input' type="submit" name="submit" value="Sign in!">
-        </fieldset>
-      </form>
       <div class='auth-msg-box'></div>
 
       <h4 class='pswd-msg-box'></h4>

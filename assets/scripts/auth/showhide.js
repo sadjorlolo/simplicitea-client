@@ -1,11 +1,8 @@
 'use strict'
 
 const initialLoadHide = function () {
-  // $('.game-board').hide()
   $('.change-pswd').hide()
   $('.sign-out').hide()
-  // $('.get-games').hide()
-  // $('.create-game').hide()
 }
 
 const clearSignUp = function () {
@@ -26,9 +23,7 @@ const clearPassword = function () {
 }
 
 const signInShowHide = function () {
-  // $('.get-games').show()
   $('.sign-out').show()
-  // $('.create-game').show()
   $('.change-pswd').show()
   $('.sign-in-as').show()
   $('.pswd-msg-box').show()
@@ -47,18 +42,12 @@ const signOutShowHide = function () {
 
   $('.change-pswd').hide()
   $('.sign-out').hide()
-  // $('.game-board').hide()
-  $('.create-game').hide()
-  // $('.get-games').hide()
   $('.sign-in-as').hide()
   $('.pswd-msg-box').hide()
 }
 
 const signOutClearMessage = function () {
   $('.message-box').text('')
-  $('.declare-winner').text('')
-  $('.stats-box').text('')
-  $('.update-msg').text('')
   $('.pswd-msg-box').text('')
 }
 

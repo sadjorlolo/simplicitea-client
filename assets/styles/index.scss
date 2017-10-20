@@ -1,2 +1,41 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+body {
+  background-color: lightblue;
+}
+
+.sign-in {
+  background-color: grey;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+}
+
+.change-pswd {
+  background-color: purple;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 10px;
+}
+
+.sign-up {
+  padding: 10px;
+  background-color: lightpink;
+  position: absolute;
+  top: 40%;
+  right: 25px;
+
+  input {
+    display: block;
+    margin-top: 5px;
+  }
+}
+
+.auth-input {
+  width: 200px;
+}
