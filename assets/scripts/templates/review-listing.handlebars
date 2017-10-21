@@ -1,0 +1,21 @@
+{{#each reviews as |review|}}
+
+ <div data-id="{{review.id}}">
+  <h1>Name: {{review.tea.name}}</h1>
+  <h1>Brand: {{review.tea.brand}}</h1>
+  <h1>Type: {{review.tea.tea_type}}</h1>
+  <h1>Packaging: {{review.tea.packaging}}</h1>
+  <h1>Water Temperature: {{review.water_temp}}</h1>
+  <h1>Steep Time (in minutes): {{review.steep_time}}</h1>
+  <h1>Rating: {{review.rating}}</h1>
+
+  <div><h1>
+     {{#if review.notes}}
+      {{review.notes}}
+    {{else}}
+      No description.
+    {{/if}}
+  </h1></div>
+</div>
+
+{{/each}}

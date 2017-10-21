@@ -40,6 +40,7 @@ const signOutSuccess = function (data) {
   store.user = null
   showhide.signOutShowHide()
   showhide.signOutClearMessage()
+  showhide.clearPassword()
 }
 
 const signOutFailure = function () {

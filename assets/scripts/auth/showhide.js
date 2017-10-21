@@ -27,6 +27,7 @@ const signInShowHide = function () {
   $('.change-pswd').show()
   $('.sign-in-as').show()
   $('.pswd-msg-box').show()
+  $('.see-reviews').show()
 
   $('.sign-in').hide()
   $('.sign-up').hide()
