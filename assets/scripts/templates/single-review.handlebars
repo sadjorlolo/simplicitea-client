@@ -1,0 +1,18 @@
+
+ <div class='this-review' data-id="{{id}}">
+  <h4>Name: {{tea.name}}</h4>
+  <h4>Brand: {{tea.brand}}</h4>
+  <h4>Type: {{tea.tea_type}}</h4>
+  <h4>Packaging: {{tea.packaging}}</h4>
+  <h4>Water Temperature: {{water_temp}}</h4>
+  <h4>Steep Time (in minutes): {{steep_time}}</h4>
+  <h4>Rating: {{rating}}</h4>
+  <h4>
+     {{#if notes}}
+      {{notes}}
+    {{else}}
+      No description.
+    {{/if}}
+  </h4>
+      <button class='delete-review' type='click'>Delete this Review</button>
+</div>

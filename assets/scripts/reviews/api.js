@@ -13,6 +13,16 @@ const index = function () {
   })
 }
 
+const show = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/reviews/' + data,
+    method: 'GET',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    }
+  })
+}
+
 const create = function () {
   return $.ajax({
     url: config.apiOrigin + '/games',
@@ -36,6 +46,7 @@ const update = function (data) {
 
 module.exports = {
   index,
+  show,
   create,
   update
 }

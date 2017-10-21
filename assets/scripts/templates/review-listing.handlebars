@@ -1,21 +1,21 @@
 {{#each reviews as |review|}}
 
- <div data-id="{{review.id}}">
-  <h1>Name: {{review.tea.name}}</h1>
-  <h1>Brand: {{review.tea.brand}}</h1>
-  <h1>Type: {{review.tea.tea_type}}</h1>
-  <h1>Packaging: {{review.tea.packaging}}</h1>
-  <h1>Water Temperature: {{review.water_temp}}</h1>
-  <h1>Steep Time (in minutes): {{review.steep_time}}</h1>
-  <h1>Rating: {{review.rating}}</h1>
-
-  <div><h1>
+ <div class='see-review' data-id="{{review.id}}">
+  <h4>Name: {{review.tea.name}}</h4>
+  <h4>Brand: {{review.tea.brand}}</h4>
+  <h4>Type: {{review.tea.tea_type}}</h4>
+  <h4>Packaging: {{review.tea.packaging}}</h4>
+  <h4>Water Temperature: {{review.water_temp}}</h4>
+  <h4>Steep Time (in minutes): {{review.steep_time}}</h4>
+  <h4>Rating: {{review.rating}}</h4>
+  <h4>
      {{#if review.notes}}
       {{review.notes}}
     {{else}}
       No description.
     {{/if}}
-  </h1></div>
+  </h4>
+      <!-- <button type='click'>See this review</button> -->
 </div>
 
 {{/each}}
