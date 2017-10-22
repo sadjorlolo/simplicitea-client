@@ -44,9 +44,21 @@ const update = function (data) {
   })
 }
 
+const destroy = function (data) {
+  return $.ajax({
+    url: config.apiOrigin + '/reviews/' + data,
+    method: 'DELETE',
+    headers: {
+      Authorization: 'Token token=' + store.user.token
+    },
+    data
+  })
+}
+
 module.exports = {
   index,
   show,
   create,
-  update
+  update,
+  destroy
 }

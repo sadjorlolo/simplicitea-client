@@ -25,6 +25,9 @@ const onDeleteReview = function (event) {
   console.log('ondelete event is', event)
   const reviewForDelete = $(this).parent().attr('data-id')
   console.log(reviewForDelete)
+  api.destroy(reviewForDelete)
+    .then(ui.deleteReviewSuccess)
+    .catch(ui.deleteReviewError)
 }
 
 const addHandlers = function () {
