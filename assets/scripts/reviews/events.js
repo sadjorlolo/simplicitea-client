@@ -1,6 +1,6 @@
 'use strict'
 
-// const getFormFields = require('../../.././lib/get-form-fields.js')
+const getFormFields = require('../../.././lib/get-form-fields.js')
 const api = require('./api.js')
 const ui = require('./ui.js')
 const teaApi = require('../teas/api.js')
@@ -50,12 +50,22 @@ const onSelectTea = function (event) {
     .catch(teaUi.getTeaError)
 }
 
+const onSubmitReview = function (event) {
+  const data = getFormFields(this)
+  console.log('onSubmitData is', data)
+  event.preventDefault()
+  api.create(data)
+    .then(ui.createReviewSuccess)
+    .catch(ui.createReviewError)
+}
+
 const addHandlers = function () {
   $('.see-reviews').on('submit', onGetReviews)
   $('.see-reviews-content').on('click', '.view-review', onGetReview)
   $('.see-review-content').on('click', '.delete-review', onDeleteReview)
   $('.create-review').on('click', onGetTeas)
   $('.see-teas').on('click', '.select-tea', onSelectTea)
+  $('.show-tea').on('submit', '.new-review', onSubmitReview)
 }
 
 module.exports = {

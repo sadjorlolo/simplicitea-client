@@ -25,6 +25,15 @@ const getReviewSuccess = function (data) {
   $('.see-review-content').html(showReviewHTML)
 }
 
+const createReviewSuccess = function (data) {
+  console.log('create review was a success!')
+  console.log('create review success data is ', data)
+}
+
+const createReviewError = function (data) {
+  console.log('something went wrong writh create review.')
+}
+
 const deleteReviewSuccess = function () {
   $('.see-review-content').html('')
   $('.delete-review-msg').text('This review has been successfully deleted')
@@ -38,6 +47,8 @@ module.exports = {
   getReviewsSuccess,
   getReviewsError,
   getReviewSuccess,
+  createReviewSuccess,
+  createReviewError,
   deleteReviewSuccess,
   deleteReviewError
 }

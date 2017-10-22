@@ -23,13 +23,14 @@ const show = function (data) {
   })
 }
 
-const create = function () {
+const create = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/reviews',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
-    }
+    },
+    data
   })
 }
 
