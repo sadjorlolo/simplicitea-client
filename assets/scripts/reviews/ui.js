@@ -26,6 +26,8 @@ const getReviewSuccess = function (data) {
 }
 
 const createReviewSuccess = function (data) {
+  $('.show-tea').html('')
+  getReviewSuccess(data)
   console.log('create review was a success!')
   console.log('create review success data is ', data)
 }
