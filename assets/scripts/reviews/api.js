@@ -25,7 +25,7 @@ const show = function (data) {
 
 const create = function () {
   return $.ajax({
-    url: config.apiOrigin + '/games',
+    url: config.apiOrigin + '/reviews',
     method: 'POST',
     headers: {
       Authorization: 'Token token=' + store.user.token
