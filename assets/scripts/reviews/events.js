@@ -40,6 +40,11 @@ const onEditReview = function (event) {
     .catch(ui.editReviewError)
 }
 
+const onCloseReview = function (event) {
+  event.preventDefault()
+  $('.see-review-content').html('')
+}
+
 const onUpdateReview = function (event) {
   event.preventDefault()
   console.log('update review button click', event)
@@ -56,6 +61,16 @@ const onGetTeas = function (event) {
   teaApi.index()
     .then(teaUi.getTeasSuccess)
     .catch(teaUi.getTeasError)
+}
+
+const onCancelCreate = function (event) {
+  event.preventDefault()
+  $('.see-teas').html('')
+}
+
+const onCancelReview = function (event) {
+  event.preventDefault()
+  $('.show-tea').html('')
 }
 
 const onSelectTea = function (event) {
@@ -80,12 +95,18 @@ const onSubmitReview = function (event) {
 const addHandlers = function () {
   $('.see-reviews').on('submit', onGetReviews)
   $('.see-reviews-content').on('click', '.view-review', onGetReview)
+
   $('.see-review-content').on('click', '.delete-review', onDeleteReview)
   $('.see-review-content').on('click', '.edit-review', onEditReview)
+  $('.see-review-content').on('click', '.close-view', onCloseReview)
+
   $('.create-review').on('click', onGetTeas)
   $('.see-teas').on('click', '.select-tea', onSelectTea)
+  $('.see-teas').on('click', '.cancel-create', onCancelCreate)
+
   $('.show-tea').on('submit', '.new-review', onSubmitReview)
-  $('.update-review-content').on('submit', '.edit-review', onUpdateReview)
+  $('.show-tea').on('click', '.cancel-review', onCancelReview)
+  $('.update-review-content').on('submit', '.update-review', onUpdateReview)
 }
 
 module.exports = {

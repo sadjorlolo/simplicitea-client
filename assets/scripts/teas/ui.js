@@ -1,11 +1,12 @@
 'use strict'
 
 const store = require('../store.js')
-// const showhide = require('../show-hide-ui.js')
+const showhide = require('../reviews/showhide.js')
 const showTeasTemplate = require('../templates/tea-listing.handlebars')
 const showTeaTemplate = require('../templates/single-tea.handlebars')
 
 const getTeasSuccess = function (data) {
+  showhide.createClick()
   console.log('data is', data)
   store.teas = data.teas
   const showTeasHTML = showTeasTemplate({ teas: store.teas })
@@ -18,6 +19,8 @@ const getTeasError = function () {
 }
 
 const getTeaSuccess = function (data) {
+  showhide.createClick()
+  showhide.seeReviewsClick()
   console.log('getTea data is', data)
   console.log('getTea data.tea is', data.tea)
   const showTeaHTML = showTeaTemplate({ tea: data.tea })

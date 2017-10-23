@@ -1,8 +1,12 @@
 'use strict'
 
+const reviewShowhide = require('../reviews/showhide.js')
+
 const initialLoadHide = function () {
   $('.change-pswd').hide()
   $('.sign-out').hide()
+
+  reviewShowhide.initialHide()
 }
 
 const clearSignUp = function () {
@@ -27,7 +31,8 @@ const signInShowHide = function () {
   $('.change-pswd').show()
   $('.sign-in-as').show()
   $('.pswd-msg-box').show()
-  $('.see-reviews').show()
+
+  reviewShowhide.signInShow()
 
   $('.sign-in').hide()
   $('.sign-up').hide()
@@ -45,6 +50,8 @@ const signOutShowHide = function () {
   $('.sign-out').hide()
   $('.sign-in-as').hide()
   $('.pswd-msg-box').hide()
+
+  reviewShowhide.signOutHide()
 }
 
 const signOutClearMessage = function () {
