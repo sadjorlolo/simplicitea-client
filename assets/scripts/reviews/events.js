@@ -32,6 +32,14 @@ const onDeleteReview = function (event) {
     .catch(ui.deleteReviewError)
 }
 
+const onEditReview = function (event) {
+  event.preventDefault()
+  const reviewForEdit = $(this).parent().attr('data-id')
+  api.show(reviewForEdit)
+    .then(ui.editReviewSuccess)
+    .catch(ui.editReviewError)
+}
+
 const onGetTeas = function (event) {
   event.preventDefault()
   console.log('onselecttea event is', event)
@@ -63,6 +71,7 @@ const addHandlers = function () {
   $('.see-reviews').on('submit', onGetReviews)
   $('.see-reviews-content').on('click', '.view-review', onGetReview)
   $('.see-review-content').on('click', '.delete-review', onDeleteReview)
+  $('.see-review-content').on('click', '.edit-review', onEditReview)
   $('.create-review').on('click', onGetTeas)
   $('.see-teas').on('click', '.select-tea', onSelectTea)
   $('.show-tea').on('submit', '.new-review', onSubmitReview)

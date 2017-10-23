@@ -4,6 +4,7 @@ const store = require('../store.js')
 // const showhide = require('../show-hide-ui.js')
 const showReviewsTemplate = require('../templates/review-listing.handlebars')
 const showReviewTemplate = require('../templates/single-review.handlebars')
+const editReviewTemplate = require('../templates/edit-review.handlebars')
 
 const getReviewsSuccess = function (data) {
   $('.see-review-content').html('')
@@ -34,6 +35,11 @@ const createReviewSuccess = function (data) {
 
 const createReviewError = function (data) {
   console.log('something went wrong writh create review.')
+}
+
+const editReviewSuccess = function (data) {
+  const editReviewHTML = editReviewTemplate(data.review)
+  $('.')
 }
 
 const deleteReviewSuccess = function () {
