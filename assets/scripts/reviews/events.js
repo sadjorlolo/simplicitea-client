@@ -60,6 +60,11 @@ const onUpdateReview = function (event) {
     .catch(ui.updateReviewError)
 }
 
+const onCancelUpdate = function (event) {
+  event.preventDefault()
+  $('.update-review-content').html('')
+}
+
 const onGetTeas = function (event) {
   event.preventDefault()
   console.log('onselecttea event is', event)
@@ -113,6 +118,7 @@ const addHandlers = function () {
   $('.show-tea').on('submit', '.new-review', onSubmitReview)
   $('.show-tea').on('click', '.cancel-review', onCancelReview)
   $('.update-review-content').on('submit', '.update-review', onUpdateReview)
+  $('.update-review-content').on('click', '.cancel-update', onCancelUpdate)
 }
 
 module.exports = {
