@@ -20,7 +20,7 @@ const getTeasError = function () {
 
 const getTeaSuccess = function (data) {
   showhide.createClick()
-  showhide.seeReviewsClick()
+  // showhide.seeReviewsClick()
   console.log('getTea data is', data)
   console.log('getTea data.tea is', data.tea)
   const showTeaHTML = showTeaTemplate({ tea: data.tea })
