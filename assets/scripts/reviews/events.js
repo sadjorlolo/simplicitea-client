@@ -7,11 +7,16 @@ const teaApi = require('../teas/api.js')
 const teaUi = require('../teas/ui.js')
 
 const onGetReviews = function (event) {
+  $('.show-tea').html('')
   console.log('onGetReviews event is', event)
   event.preventDefault()
   api.index()
     .then(ui.getReviewsSuccess)
     .catch(ui.getReviewsError)
+}
+
+const onCancelView = function (event) {
+  $('.see-reviews-content').html('')
 }
 
 const onGetReview = function (event) {
@@ -95,6 +100,7 @@ const onSubmitReview = function (event) {
 const addHandlers = function () {
   $('.see-reviews').on('submit', onGetReviews)
   $('.see-reviews-content').on('click', '.view-review', onGetReview)
+  $('.see-reviews-content').on('click', '.close-view-reviews', onCancelView)
 
   $('.see-review-content').on('click', '.delete-review', onDeleteReview)
   $('.see-review-content').on('click', '.edit-review', onEditReview)

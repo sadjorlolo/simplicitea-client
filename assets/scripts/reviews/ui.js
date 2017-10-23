@@ -1,13 +1,13 @@
 'use strict'
 
 const store = require('../store.js')
-// const showhide = require('./showhide.js')
+const showhide = require('./showhide.js')
 const showReviewsTemplate = require('../templates/review-listing.handlebars')
 const showReviewTemplate = require('../templates/single-review.handlebars')
 const editReviewTemplate = require('../templates/edit-review.handlebars')
 
 const getReviewsSuccess = function (data) {
-  $('.see-review-content').html('')
+  showhide.seeReviewsClick()
   console.log('data is', data)
   store.reviews = data.reviews
   const showReviewsHTML = showReviewsTemplate({ reviews: store.reviews })
