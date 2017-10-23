@@ -38,8 +38,13 @@ const createReviewError = function (data) {
 }
 
 const editReviewSuccess = function (data) {
+  $('.see-review-content').html('')
   const editReviewHTML = editReviewTemplate(data.review)
-  $('.')
+  $('.update-review-content').html(editReviewHTML)
+}
+
+const editReviewError = function () {
+  console.log('Edit review did not work. Try again.')
 }
 
 const deleteReviewSuccess = function () {
@@ -58,5 +63,7 @@ module.exports = {
   createReviewSuccess,
   createReviewError,
   deleteReviewSuccess,
-  deleteReviewError
+  deleteReviewError,
+  editReviewSuccess,
+  editReviewError
 }

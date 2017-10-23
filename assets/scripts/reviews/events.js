@@ -40,6 +40,16 @@ const onEditReview = function (event) {
     .catch(ui.editReviewError)
 }
 
+const onUpdateReview = function (event) {
+  event.preventDefault()
+  console.log('update review button click', event)
+  const data = getFormFields(this)
+  console.log(data)
+  api.update(data)
+    .then(ui.updateReviewSuccess)
+    .catch(ui.updateReviewError)
+}
+
 const onGetTeas = function (event) {
   event.preventDefault()
   console.log('onselecttea event is', event)
@@ -75,6 +85,7 @@ const addHandlers = function () {
   $('.create-review').on('click', onGetTeas)
   $('.see-teas').on('click', '.select-tea', onSelectTea)
   $('.show-tea').on('submit', '.new-review', onSubmitReview)
+  $('.update-review-content').on('submit', '.edit-review', onUpdateReview)
 }
 
 module.exports = {

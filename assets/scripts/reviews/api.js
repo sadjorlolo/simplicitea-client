@@ -36,7 +36,7 @@ const create = function (data) {
 
 const update = function (data) {
   return $.ajax({
-    url: config.apiOrigin + '/review/' + store.game.id,
+    url: config.apiOrigin + '/reviews/' + data.review.id,
     method: 'PATCH',
     headers: {
       Authorization: 'Token token=' + store.user.token
