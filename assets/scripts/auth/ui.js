@@ -4,7 +4,7 @@ const store = require('../store.js')
 const showhide = require('./showhide.js')
 
 const signUpSuccess = function (data) {
-  $('.sign-up-auth-msg-box').text('Sign up successful!')
+  $('.sign-up-auth-msg-box').text('Sign up successful!').fadeOut(3000)
   showhide.clearSignUp()
 }
 
@@ -26,17 +26,17 @@ const signInFailure = function () {
 }
 
 const changePasswordSuccess = function (data) {
-  $('.pswd-msg-box').text('Changed password successfully!')
+  $('.pswd-msg-box').text('Changed password successfully!').fadeOut(5000)
   showhide.clearPassword()
 }
 
 const changePasswordFailure = function () {
-  $('.pswd-msg-box').text('Change Password failed.')
+  $('.pswd-msg-box').text('Change Password failed.').fadeOut(5000)
   showhide.clearPassword()
 }
 
 const signOutSuccess = function (data) {
-  $('.sign-out-auth-msg-box').text('Signed out successfully!')
+  $('.sign-out-auth-msg-box').text('Signed out successfully!').fadeOut(5000)
   store.user = null
   showhide.signOutShowHide()
   showhide.signOutClearMessage()

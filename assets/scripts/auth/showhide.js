@@ -49,7 +49,6 @@ const signOutShowHide = function () {
   $('.sign-in-play').show()
   $('.sign-in-auth-msg-box').text('')
   $('.sign-up-auth-msg-box').text('')
-  $('.sign-out-auth-msg-box').text('')
 
   $('.change-pswd').hide()
   $('.sign-out').hide()

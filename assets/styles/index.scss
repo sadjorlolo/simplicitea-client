@@ -5,10 +5,12 @@ $lightpink: #f9f0f1;
 $purple: #774860;
 $grey-green: #ced7ce;
 $spade: #809c95;
+$eggplant: #142128;
 
 body {
   background-color: $lightpink;
   font-family: Georgia, serif;
+  color: $eggplant;
 }
 
 .sign-in {
@@ -30,18 +32,22 @@ body {
   }
 }
 
-.auth-button {
-  background-color: $purple;
-  color: $lightpink;
-}
 
 .change-pswd {
-  background-color: purple;
-  padding: 10px;
   position: absolute;
   right: 0;
-  top: 0;
-  margin: 10px;
+  top: 30px;
+  margin: 5px;
+
+  input {
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid $grey-green;
+    padding-left: 5px;
+    margin: 3px;
+    letter-spacing: .75px;
+    width: 200px;
+  }
 }
 
 .sign-up {
@@ -85,4 +91,40 @@ body {
 .sign-in-auth-msg-box {
   font-size: 15px;
   padding-left: 10px;
+}
+
+.sign-up-auth-msg-box {
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+.sign-in-as {
+  position: absolute;
+  right: 140px;
+  top: 0;
+}
+
+.sign-out {
+  position: absolute;
+  right: 10px;
+  top: 0;
+
+  input {
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid $grey-green;
+    letter-spacing: .75px;
+    width: 100px;
+    margin-top: 5px;
+  }
+}
+
+.auth-button {
+  background-color: $purple;
+  color: $lightpink;
+}
+
+.sign-out-auth-msg-box {
+  text-align: center;
+  font-size: 15px;
 }

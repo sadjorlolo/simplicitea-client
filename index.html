@@ -15,6 +15,7 @@
 
       <!-- Authentication. Do Not Change! -->
 
+      <h4 class='sign-in-as'></h4>
       <form class="sign-in user-info">
         <fieldset>
           <input class='signin_email auth-input'type="text" name="credentials[email]" placeholder="Enter Email">
@@ -23,9 +24,6 @@
         </fieldset>
         <div class='sign-in-auth-msg-box'></div>
       </form>
-
-
-      <h4 class='sign-in-as'></h4>
 
       <div class='page-title'>simplici<span>&#9824;</span>tea</div>
 
@@ -37,21 +35,21 @@
           <input class='signup_conf auth-input' type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
           <input class='auth-button auth-input' type="submit" name="submit" value="Sign up!">
         </fieldset>
+        <div class='sign-up-auth-msg-box'></div>
       </form>
-      <div class='sign-up-auth-msg-box'></div>
 
       <h4 class='pswd-msg-box'></h4>
       <form class="change-pswd">
         <fieldset>
           <input class='pswd_old' type="password" name="passwords[old]" placeholder="Enter Old Password">
           <input class='pswd_new' type="password" name="passwords[new]" placeholder="Enter New Password">
-          <input type="submit" name="submit" value="Change Password!">
+          <input class='auth-button' type="submit" name="submit" value="Change Password!">
         </fieldset>
       </form>
 
       <form class="sign-out">
         <fieldset>
-          <input type="submit" name="submit" value="Sign out!">
+          <input class='auth-button' type="submit" name="submit" value="Sign out!">
         </fieldset>
       </form>
       <div class='sign-out-auth-msg-box'></div>
