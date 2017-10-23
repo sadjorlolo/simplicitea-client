@@ -1,17 +1,38 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
+$lightpink: #f9f0f1;
+$purple: #774860;
+$grey-green: #ced7ce;
+$spade: #809c95;
+
 body {
-  background-color: lightblue;
+  background-color: $lightpink;
+  font-family: Georgia, serif;
 }
 
 .sign-in {
-  background-color: grey;
-  padding: 10px;
   position: absolute;
-  right: 0;
   top: 0;
+  right: 0;
+  // top: 0;
+  // right: 0;
   margin: 10px;
+
+  input {
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid $grey-green;
+    padding-left: 5px;
+    margin: 3px;
+    letter-spacing: .75px;
+    width: 230px;
+  }
+}
+
+.auth-button {
+  background-color: $purple;
+  color: $lightpink;
 }
 
 .change-pswd {
@@ -25,22 +46,43 @@ body {
 
 .sign-up {
   padding: 10px;
-  background-color: lightpink;
-  position: absolute;
-  top: 40%;
-  right: 25px;
+  margin: auto;
+  width: 300px;
 
   input {
-    display: block;
-    margin-top: 5px;
+    border-radius: 5px;
+    height: 30px;
+    border: 1px solid $grey-green;
+    padding-left: 5px;
+    margin: 3px;
+    letter-spacing: .75px;
+    width: 250px;
   }
 }
+
+  .auth-header {
+    width: 250px;
+    font-size: 20px;
+    text-align: center;
+  }
 
 .auth-input {
   width: 200px;
 }
 
-#page-title {
-  font-size: 60px;
+.page-title {
+  font-size: 70px;
   text-align: center;
+  font-weight: bold;
+  margin: 0 auto;
+  margin-top: 70px;
+
+  span {
+    color: $spade;
+  }
+}
+
+.sign-in-auth-msg-box {
+  font-size: 15px;
+  padding-left: 10px;
 }

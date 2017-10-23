@@ -18,7 +18,8 @@ const clearSignUp = function () {
 const clearSignIn = function () {
   $('.signin_email').val('')
   $('.signin_pswd').val('')
-  $('.auth-msg-box').val('')
+  $('.sign-in-auth-msg-box').val('')
+  $('.sign-up-auth-msg-box').val('')
 }
 
 const clearPassword = function () {
@@ -37,14 +38,18 @@ const signInShowHide = function () {
   $('.sign-in').hide()
   $('.sign-up').hide()
   $('.sign-in-play').hide()
-  $('.auth-msg-box').hide()
+  $('.sign-up-auth-msg-box').text('')
+  $('.sign-in-auth-msg-box').text('')
+  $('.sign-out-auth-msg-box').text('')
 }
 
 const signOutShowHide = function () {
   $('.sign-in').show()
   $('.sign-up').show()
   $('.sign-in-play').show()
-  $('.auth-msg-box').show()
+  $('.sign-in-auth-msg-box').text('')
+  $('.sign-up-auth-msg-box').text('')
+  $('.sign-out-auth-msg-box').text('')
 
   $('.change-pswd').hide()
   $('.sign-out').hide()
