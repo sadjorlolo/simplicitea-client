@@ -1,24 +1,26 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 
 $lightpink: #f9f0f1;
 $purple: #774860;
 $grey-green: #ced7ce;
 $spade: #809c95;
-$eggplant: #142128;
+$blue: #617493;
+$green: #809c95;
+$light-green: #bed5b8;
 
 body {
   background-color: $lightpink;
-  font-family: Georgia, serif;
-  color: $eggplant;
+  font-family: 'Nunito', sans-serif;
+  font-size: 17px;
 }
 
 .sign-in {
   position: absolute;
   top: 0;
   right: 0;
-  // top: 0;
-  // right: 0;
   margin: 10px;
 
   input {
@@ -31,7 +33,6 @@ body {
     width: 230px;
   }
 }
-
 
 .change-pswd {
   position: absolute;
@@ -127,4 +128,30 @@ body {
 .sign-out-auth-msg-box {
   text-align: center;
   font-size: 15px;
+}
+
+.landing-buttons {
+  text-align: center;
+  margin-top: 20px;
+
+  input {
+    width: 500px;
+    height: 50px;
+    margin: 5px;
+    font-size: 25px;
+    font-weight: bold;
+    border: 1px solid $grey-green;
+    background-color: white;
+    border-radius: 10px;
+    color: $lightpink;
+    letter-spacing: .75px;
+  }
+
+  .create-button {
+    background-color: $blue;
+  }
+
+  .index-button {
+    background-color: $green;
+  }
 }
