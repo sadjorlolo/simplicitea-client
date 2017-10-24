@@ -1,10 +1,14 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+[![Simplici*tea logo](https://i.imgur.com/fkvppfJ.png](https://sadjorlolo.github.io/simplicitea-client/)
 
-# browser-template
+# Simplici*tea
 
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
+[Simplici*tea](https://sadjorlolo.github.io/simplicitea-client/) is a full-stack
+application created by me, Sarah Adjorlolo. Both the [front-end repository](https://github.com/sadjorlolo/simplicitea-client)
+and the [back-end repository](https://github.com/sadjorlolo/sarah-fullstack) are
+pinned to my personal [Github](https://github.com/sadjorlolo) page.
+
+This application can be found here: https://sadjorlolo.github.io/simplicitea-client/.
+The back-end is deployed here: https://desolate-depths-48909.herokuapp.com/.
 
 ## Installation
 
