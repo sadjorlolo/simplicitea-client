@@ -44,7 +44,11 @@ const editReviewSuccess = function (data) {
 }
 
 const editReviewError = function () {
+  $('edit-review-msg').show()
+  $('edit-review-msg').text('Sorry, cannot retrieve review for edit.')
   console.log('Edit review did not work. Try again.')
+  $('.create-review').show()
+  $('.see-reviews').show()
 }
 
 const updateReviewSuccess = function (data) {
@@ -58,10 +62,14 @@ const updateReviewError = function () {
 
 const deleteReviewSuccess = function () {
   $('.see-review-content').html('')
+  $('.delete-review-msg').text('')
+  $('.delete-review-msg').show()
   $('.delete-review-msg').text('This review has been successfully deleted')
 }
 
 const deleteReviewError = function () {
+  $('.delete-review-msg').text('')
+  $('.delete-review-msg').show()
   $('.delete-review-msg').text('Something went wrong. Please try again.')
 }
 

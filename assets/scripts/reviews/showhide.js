@@ -29,7 +29,8 @@ const createClick = function () {
   $('.update-review-content').html('')
   $('.see-teas').html('')
   $('.show-tea').html('')
-  // $('.see-reviews').hide()
+  $('.delete-review-msg').hide()
+  $('edit-review-msg').hide()
 }
 
 const seeReviewsClick = function () {
@@ -38,6 +39,8 @@ const seeReviewsClick = function () {
   $('.update-review-content').html('')
   $('.see-teas').html('')
   $('.show-tea').html('')
+  $('.delete-review-msg').hide()
+  $('edit-review-msg').hide()
 }
 
 module.exports = {

@@ -1,4 +1,4 @@
-<div class='selected-tea' data-id="{{tea.id}}">
+<div class='selected-review' data-id="{{id}}">
  <h4>Name: {{tea.name}}</h4>
  <h4>Brand: {{tea.brand}}</h4>
  <h4>Type: {{tea.tea_type}}</h4>
@@ -8,20 +8,27 @@
    <fieldset>
      <input type='hidden' name='review[id]' value="{{id}}">
      <input type='hidden' name='review[tea_id]' value ="{{tea.id}}">
+     <h4> Water Temperature:
      <select class='water-temp' name='review[water_temp]' value="{{water_temp}}">
        <option value='Hot'>Hot</option>
        <option value='Iced'>Iced</option>
      </select>
-     <input type='text' class='steep-time' name='review[steep_time]' value="{{steep_time}}">
-     <select class='rating' name='review[rating]' value="{{rating}}">
-       <option value='1'>1</option>
-       <option value='2'>2</option>
-       <option value='3'>3</option>
-       <option value='4'>4</option>
-       <option value='5'>5</option>
-     </select>
+     </h4>
+     <h4> Steep Time:
+       <input type='text' class='steep-time' name='review[steep_time]' value="{{steep_time}}">
+     </h4>
+     <h4> Rating:
+       <select class='rating' name='review[rating]' value="{{rating}}">
+         <option value='1'>1</option>
+         <option value='2'>2</option>
+         <option value='3'>3</option>
+         <option value='4'>4</option>
+         <option value='5'>5</option>
+       </select>
+     </h4>
+     <h4>Notes: </h4>
      <input type='text' class='notes' name='review[notes]' value="{{notes}}">
-     <input type='submit' name='submit' value='Update Review'>
+     <input type='submit' class='update-input-button' name='submit' value='Update Review'>
    </fieldset>
  </form>
  <button type='click' class='cancel-update'>Cancel</button>

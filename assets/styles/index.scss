@@ -233,3 +233,73 @@ body {
 .instructions {
   font-weight: bold;
 }
+
+.this-review {
+  background-color: $grey-green;
+  margin: 0 auto;
+  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+
+  button {
+    width: 100%;
+    background-color: $purple;
+    color: $lightpink;
+    border: 1px solid $grey-green;
+    border-radius: 5px;
+  }
+}
+
+.delete-review-msg {
+  text-align: center;
+}
+
+.selected-review {
+  background-color: $grey-green;
+  margin: 0 auto;
+  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+
+  button {
+    width: 100%;
+    background-color: $purple;
+    color: $lightpink;
+    border: 1px solid $grey-green;
+    border-radius: 5px;
+  }
+
+  .update-input-button {
+    width: 100%;
+    background-color: $purple;
+    color: $lightpink;
+    border: 1px solid $grey-green;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+}
+
+.selected-tea {
+  background-color: $light-blue;
+  margin: 0 auto;
+  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+
+  button {
+    width: 100%;
+    background-color: $purple;
+    color: $lightpink;
+    border: 1px solid $grey-green;
+    border-radius: 5px;
+  }
+
+  .update-input-button {
+    width: 100%;
+    background-color: $purple;
+    color: $lightpink;
+    border: 1px solid $grey-green;
+    border-radius: 5px;
+    margin-top: 5px;
+  }
+}

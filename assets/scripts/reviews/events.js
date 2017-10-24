@@ -33,6 +33,8 @@ const onGetReview = function (event) {
 }
 
 const onDeleteReview = function (event) {
+  $('.create-review').show()
+  $('.see-reviews').show()
   event.preventDefault()
   console.log('ondelete event is', event)
   const reviewForDelete = $(this).parent().attr('data-id')
