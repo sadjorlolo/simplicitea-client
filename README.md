@@ -1,4 +1,4 @@
-[![Simplici*tea logo](https://i.imgur.com/fkvppfJ.png](https://sadjorlolo.github.io/simplicitea-client/)
+[![Simplici*tea logo](https://i.imgur.com/fkvppfJ.png)](https://sadjorlolo.github.io/simplicitea-client/)
 
 # Simplici*tea
 
