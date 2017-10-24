@@ -17,6 +17,9 @@ body {
   font-size: 17px;
 }
 
+.signindiv {
+  height: 60px;
+}
 .sign-in {
   position: absolute;
   top: 0;
@@ -86,6 +89,7 @@ body {
 
   span {
     color: $spade;
+    font-size: 55px;
   }
 }
 
@@ -130,6 +134,11 @@ body {
   font-size: 15px;
 }
 
+.pswd-msg-box {
+  position: relative;
+  left: 10px;
+}
+
 .landing-buttons {
   text-align: center;
   margin-top: 20px;
@@ -154,4 +163,41 @@ body {
   .index-button {
     background-color: $green;
   }
+}
+
+.see-review {
+  float: left;
+  background-color: $grey-green;
+  margin: 10px;
+  width: 350px;
+  padding: 10px;
+  border-radius: 5px;
+
+  button {
+    width: 100%;
+    background-color: $purple;
+    color: $lightpink;
+    border: 1px solid $grey-green;
+    border-radius: 5px;
+  }
+}
+
+.close-reviews-button {
+  margin: 10px;
+  text-align: center;
+
+  button {
+    background-color: $green;
+    color: $lightpink;
+    border-radius: 5px;
+    border: 1px solid $grey-green;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.instructions {
+  font-weight: bold;
 }

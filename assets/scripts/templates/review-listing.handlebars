@@ -1,3 +1,7 @@
+<div class='close-reviews-button'>
+  <button class='close-view-reviews' type='click'>Close reviews</button>
+</div>
+
 {{#each reviews as |review|}}
 
  <div class='see-review' data-id="{{review.id}}">
@@ -15,9 +19,7 @@
       No description.
     {{/if}}
   </h4>
-  <button class='view-review' type='click'>View this Review</button>
+  <button class='view-review' type='click'>View</button>
 </div>
 
 {{/each}}
-
-<button class='close-view-reviews' type='click'>Close reviews</button>

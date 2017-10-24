@@ -5,9 +5,12 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const teaApi = require('../teas/api.js')
 const teaUi = require('../teas/ui.js')
+// const showhide = require('./showhide.js')
 
 const onGetReviews = function (event) {
   $('.show-tea').html('')
+  $('.create-review').hide()
+  $('.see-reviews').hide()
   console.log('onGetReviews event is', event)
   event.preventDefault()
   api.index()
@@ -17,6 +20,8 @@ const onGetReviews = function (event) {
 
 const onCancelView = function (event) {
   $('.see-reviews-content').html('')
+  $('.create-review').show()
+  $('.see-reviews').show()
 }
 
 const onGetReview = function (event) {
@@ -48,6 +53,8 @@ const onEditReview = function (event) {
 const onCloseReview = function (event) {
   event.preventDefault()
   $('.see-review-content').html('')
+  $('.create-review').show()
+  $('.see-reviews').show()
 }
 
 const onUpdateReview = function (event) {
@@ -63,9 +70,13 @@ const onUpdateReview = function (event) {
 const onCancelUpdate = function (event) {
   event.preventDefault()
   $('.update-review-content').html('')
+  $('.create-review').show()
+  $('.see-reviews').show()
 }
 
 const onGetTeas = function (event) {
+  $('.create-review').hide()
+  $('.see-reviews').hide()
   event.preventDefault()
   console.log('onselecttea event is', event)
   teaApi.index()
@@ -76,11 +87,15 @@ const onGetTeas = function (event) {
 const onCancelCreate = function (event) {
   event.preventDefault()
   $('.see-teas').html('')
+  $('.create-review').show()
+  $('.see-reviews').show()
 }
 
 const onCancelReview = function (event) {
   event.preventDefault()
   $('.show-tea').html('')
+  $('.create-review').show()
+  $('.see-reviews').show()
 }
 
 const onSelectTea = function (event) {
