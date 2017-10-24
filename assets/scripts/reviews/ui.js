@@ -29,6 +29,7 @@ const getReviewSuccess = function (data) {
 const createReviewSuccess = function (data) {
   $('.show-tea').html('')
   getReviewSuccess(data)
+  $('.new-created').text('Your review was created successfully!')
   console.log('create review was a success!')
   console.log('create review success data is ', data)
 }
@@ -41,6 +42,8 @@ const editReviewSuccess = function (data) {
   $('.see-review-content').html('')
   const editReviewHTML = editReviewTemplate(data.review)
   $('.update-review-content').html(editReviewHTML)
+  $('#edit-review-rating').val(data.review.rating)
+  $('#edit-review-water-temp').val(data.review.water_temp)
 }
 
 const editReviewError = function () {
@@ -53,11 +56,13 @@ const editReviewError = function () {
 
 const updateReviewSuccess = function (data) {
   $('.update-review-content').html('')
+  $('.new-update').text('Your review has been updated.')
   getReviewSuccess(data)
 }
 
 const updateReviewError = function () {
-  console.log('something went wrong. try again.')
+  $('.update-review-content').html('')
+  $('.update-error-msg').text('Something went wrong. Please try again.')
 }
 
 const deleteReviewSuccess = function () {

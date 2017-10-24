@@ -11,6 +11,7 @@ const onGetReviews = function (event) {
   $('.show-tea').html('')
   $('.create-review').hide()
   $('.see-reviews').hide()
+  $('.update-error-msg').hide()
   console.log('onGetReviews event is', event)
   event.preventDefault()
   api.index()
@@ -33,6 +34,8 @@ const onGetReview = function (event) {
 }
 
 const onDeleteReview = function (event) {
+  $('.new-update').text('')
+  $('.new-created').text('')
   $('.create-review').show()
   $('.see-reviews').show()
   event.preventDefault()
@@ -45,6 +48,8 @@ const onDeleteReview = function (event) {
 }
 
 const onEditReview = function (event) {
+  $('.new-update').text('')
+  $('.new-created').text('')
   event.preventDefault()
   const reviewForEdit = $(this).parent().attr('data-id')
   api.show(reviewForEdit)
@@ -53,6 +58,8 @@ const onEditReview = function (event) {
 }
 
 const onCloseReview = function (event) {
+  $('.new-update').text('')
+  $('.new-created').text('')
   event.preventDefault()
   $('.see-review-content').html('')
   $('.create-review').show()
@@ -79,6 +86,7 @@ const onCancelUpdate = function (event) {
 const onGetTeas = function (event) {
   $('.create-review').hide()
   $('.see-reviews').hide()
+  $('.update-error-msg').hide()
   event.preventDefault()
   console.log('onselecttea event is', event)
   teaApi.index()

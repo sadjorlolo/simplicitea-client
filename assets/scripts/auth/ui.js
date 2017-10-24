@@ -41,6 +41,8 @@ const changePasswordFailure = function () {
 }
 
 const signOutSuccess = function (data) {
+  $('.new-update').text('')
+  $('.new-created').text('')
   $('.sign-out-auth-msg-box').fadeIn(5)
   $('.sign-out-auth-msg-box').text('Signed out successfully!').fadeOut(5000)
   store.user = null

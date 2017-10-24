@@ -9,7 +9,7 @@
      <input type='hidden' name='review[id]' value="{{id}}">
      <input type='hidden' name='review[tea_id]' value ="{{tea.id}}">
      <h4> Water Temperature:
-     <select class='water-temp' name='review[water_temp]' value="{{water_temp}}">
+     <select class='water-temp' id='edit-review-water-temp' name='review[water_temp]'>
        <option value='Hot'>Hot</option>
        <option value='Iced'>Iced</option>
      </select>
@@ -18,7 +18,7 @@
        <input type='text' class='steep-time' name='review[steep_time]' value="{{steep_time}}">
      </h4>
      <h4> Rating:
-       <select class='rating' name='review[rating]' value="{{rating}}">
+       <select class='rating' id='edit-review-rating' name='review[rating]'>
          <option value='1'>1</option>
          <option value='2'>2</option>
          <option value='3'>3</option>

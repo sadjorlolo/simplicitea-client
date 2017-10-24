@@ -12,11 +12,12 @@
   <h4>Water Temperature: {{review.water_temp}}</h4>
   <h4>Steep Time (in minutes): {{review.steep_time}}</h4>
   <h4>Rating: {{review.rating}}</h4>
-  <h4 class='view-review-notes'>Notes: <br>
+  <h4>Notes:</h4>
+  <h4 class='view-review-notes'>
      {{#if review.notes}}
       {{review.notes}}
     {{else}}
-      No description.
+      No review.
     {{/if}}
   </h4>
   <button class='view-review' type='click'>View</button>

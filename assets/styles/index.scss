@@ -125,6 +125,16 @@ body {
   }
 }
 
+.new-created {
+  text-align: center;
+}
+
+.view-review-notes {
+  height: 70px;
+  overflow-wrap: break-word;
+  overflow: auto;
+}
+
 .auth-button {
   background-color: $purple;
   color: $lightpink;
@@ -173,6 +183,7 @@ body {
   width: 350px;
   padding: 10px;
   border-radius: 5px;
+  // height: 350px;
 
   button {
     width: 100%;
@@ -248,6 +259,10 @@ body {
     border: 1px solid $grey-green;
     border-radius: 5px;
   }
+
+  .view-review-notes {
+    display: table;
+  }
 }
 
 .delete-review-msg {
@@ -309,10 +324,10 @@ body {
   }
 }
 
-.view-review-notes {
-  overflow-wrap: break-word;
-}
-
 .steep-time {
   width: 50px;
+}
+
+.update-error-msg {
+  text-align: center;
 }
