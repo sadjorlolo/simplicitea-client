@@ -3,63 +3,95 @@
 # Simplici*tea
 
 [Simplici*tea](https://sadjorlolo.github.io/simplicitea-client/) is a full-stack
-application created by me, Sarah Adjorlolo. Both the [front-end repository](https://github.com/sadjorlolo/simplicitea-client)
+single page application created by me, Sarah Adjorlolo.
+Both the [front-end repository](https://github.com/sadjorlolo/simplicitea-client)
 and the [back-end repository](https://github.com/sadjorlolo/sarah-fullstack) are
 pinned to my personal [Github](https://github.com/sadjorlolo) page.
 
 This application can be found here: https://sadjorlolo.github.io/simplicitea-client/.
+
 The back-end is deployed here: https://desolate-depths-48909.herokuapp.com/.
 
-## Installation
+## About the Application
 
-1.  [Download](../../archive/master.zip) this template.
-1.  Unzip and rename the template directory.
-1.  Empty [`README.md`](README.md) and fill with your own content.
-1.  Replace all instances of `ga-wdi-boston.browser-template` with the name of your project.
-1.  Move into the new project and `git init`
-1.  Add all of the files in your project with the command `git add -A`
-  -   *Note:* THIS IS THE ONLY TIME YOU SHOULD RUN THIS COMMAND
-1.  Commit all of your files with the command `git commit`
-  -   Your commit title should read `Initial commit`
-1.  Install dependencies with `npm install`.
+The purpose of this application is to allow a user to store, update, and delete
+their personal tea reviews. Since the reviews are associated with a specific,
+signed in user, they cannot be created, viewed, updated, or deleted by any
+other user.
 
-## Structure
+Upon sign in, the user has the ability to sign out, change password, create a
+new review, and view all of their reviews.
 
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/index.js`](assets/scripts/index.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
+If a user chooses to create a review, upon clicking the "Create New Review"
+button, there is first a prompt to select from a pre-defined list of teas to
+review. Upon tea selection, the user can enter information for their review,
+such as water temperature, steep time, rating, and notes. After saving, the
+newly created review is available in the list of all reviews associated with
+that user. A single review must be selected before being updated or deleted.
 
-Developers should set `config.apiOrigins.production` (and
-`config.apiOrigins.development` if it differs from the default).  With
-`apiOrigins` set, developers may rely on `config.apiOrigin` as the base for API
-URLs.
+## Development Process
 
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss).
+The developmemt process for this application begin with designing the setup of
+the back-end API. I knew I would have at least three tables: Users, Reviews,
+and Teas. Each User would have multiple Reviews, and each Tea could be linked to
+multiple Reviews, but each Review could only be associated with a single user
+id and a single tea id.
 
-Developers should use [getFormFields](forms.md) to retrieve form data to send to
-an API.
+Once each table was set up with the intended columns and datatypes, I attached
+foreign keys for both user_id and tea_id to the Reviews table. Both Users and
+Reviews belongs to Protected classes, meaning they cannot be accessed or changed
+unless a user is signed in. The Tea table, however, is not a Protected class.
+The contents of the Teas table are fully accessable to the public, though only
+through index and show methods.
 
-To deploy a browser-template based SPA, run `grunt deploy`.
+I tested curl requests for each resource to ensure records could be added to,
+viewed, updated, and deleted from the database, given specific input constraints.
 
-## Tasks
+With the back-end complete, I began working on the front-end. With a series of
+forms, buttons, console.log messages, and input fields, I was able to set up
+user functionality with the correct API calls for signing up, signing in,
+changing password, signing out, viewing all tea reviews, viewing a single review,
+creating a new review and saving it to the database, updating an existing review
+and saving changes to the database, and deleting a review from the database.
 
-Developers should run these often!
+Whenever I encountered a problem, I would comment out code unnecessary to
+solving the problem at hand, make sure I was passing the proper data in my
+callback functions by verifying the data in console logs. If the data was
+incorrect, I would correct the mistake and test again. If the data was correct,
+I had to re-evaluate the path the data was traveling and make adjustments as
+needed to get the correct data through the correct function and to the database.
 
--   `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
--   `grunt make-standard`: reformats all your code in the JavaScript Standard Style
--   `grunt <server|serve|s>`: generates bundles, watches, and livereloads
--   `grunt test`: runs any automated tests, depends on `grunt build`
--   `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
+## Technologies Used
 
-## [License](LICENSE)
+The following technologies were used in the creation of this application:
+  - HTML for application layout.
+  - SCSS for custom application design and formatting.
+  - AJAX requests for interacting with my API:
+    - POST, PATCH, GET, and DELETE.
+    - Authorization headers to specify actions for a signed-in user.
+  - jQuery for DOM manipulation and event handling functionality.
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+## Future Iterations
+
+1) Add responsiveness for different sized screens.
+2) Add search functionality for reviews to allow a user to filter based on tea
+   brand, name, type, etc.
+3) Allow users to create new teas to review, but also search global database
+   in case of duplicates (fuzzy match).
+4) Change "rating" to have selectable stars instead of selecting a number from a
+   dropdown.
+
+## Wireframes and User Stories
+
+![Simplicitea Wireframes](https://i.imgur.com/Zm36fkf.png)
+
+User stories:
+
+As a user, I want to...
+
+1) Sign up, sign in, sign out, change password
+2) Create a review and save it to the database.
+3) Edit a review and have updates save to the database.
+4) Delete a review from the database.
+5) See all reviews I have created.
+6) View a single review.
