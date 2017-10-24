@@ -180,14 +180,18 @@ body {
   }
 }
 
+.see-reviews-content {
+  text-align: center;
+}
+
 .see-review {
-  float: left;
+  text-align: left;
+  display: inline-block;
   background-color: $grey-green;
   margin: 10px;
   width: 350px;
   padding: 10px;
   border-radius: 5px;
-  // height: 350px;
 
   button {
     width: 100%;
@@ -214,11 +218,16 @@ body {
   }
 }
 
+.see-teas {
+  text-align: center;
+}
+
 .see-tea {
+  text-align: left;
   background-color: $light-blue;
   padding: 10px;
   margin: 10px;
-  float: left;
+  display: inline-block;
   width: 300px;
 
    button {
