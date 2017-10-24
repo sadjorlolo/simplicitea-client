@@ -35,6 +35,10 @@ const createReviewSuccess = function (data) {
 }
 
 const createReviewError = function (data) {
+  $('.new-created').text('Something went wrong.')
+  $('.show-tea').html('')
+  $('.create-review').show()
+  $('.see-reviews').show()
   console.log('something went wrong writh create review.')
 }
 
