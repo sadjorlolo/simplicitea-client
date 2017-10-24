@@ -10,6 +10,7 @@ $spade: #809c95;
 $blue: #617493;
 $green: #809c95;
 $light-green: #bed5b8;
+$light-blue: #cedae7;
 
 body {
   background-color: $lightpink;
@@ -183,7 +184,7 @@ body {
 }
 
 .close-reviews-button {
-  margin: 10px;
+  margin: 5px;
   text-align: center;
 
   button {
@@ -191,6 +192,37 @@ body {
     color: $lightpink;
     border-radius: 5px;
     border: 1px solid $grey-green;
+    height: 40px;
+    width: 150px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+}
+
+.see-tea {
+  background-color: $light-blue;
+  padding: 10px;
+  margin: 10px;
+  float: left;
+  width: 300px;
+
+   button {
+     width: 100%;
+     background-color: $purple;
+     color: $lightpink;
+     border: 1px solid $grey-green;
+     border-radius: 5px;
+   }
+}
+
+.close-select-tea-button {
+  text-align: center;
+
+  .cancel-create {
+    background-color: $blue;
+    color: $lightpink;
+    border: 1px solid $grey-green;
+    border-radius: 5px;
     height: 40px;
     width: 150px;
     font-size: 20px;

@@ -47,6 +47,15 @@ const editReviewError = function () {
   console.log('Edit review did not work. Try again.')
 }
 
+const updateReviewSuccess = function (data) {
+  $('.update-review-content').html('')
+  getReviewSuccess(data)
+}
+
+const updateReviewError = function () {
+  console.log('something went wrong. try again.')
+}
+
 const deleteReviewSuccess = function () {
   $('.see-review-content').html('')
   $('.delete-review-msg').text('This review has been successfully deleted')
@@ -65,5 +74,7 @@ module.exports = {
   deleteReviewSuccess,
   deleteReviewError,
   editReviewSuccess,
-  editReviewError
+  editReviewError,
+  updateReviewSuccess,
+  updateReviewError
 }
