@@ -6,20 +6,14 @@ const config = require('../config.js')
 const index = function () {
   return $.ajax({
     url: config.apiOrigin + '/teas',
-    method: 'GET'// ,
-    // headers: {
-    //   Authorization: 'Token token=' + store.user.token
-    // }
+    method: 'GET'
   })
 }
 
 const show = function (data) {
   return $.ajax({
     url: config.apiOrigin + '/teas/' + data,
-    method: 'GET'// ,
-    // headers: {
-    //   Authorization: 'Token token=' + store.user.token
-    // }
+    method: 'GET'
   })
 }
 

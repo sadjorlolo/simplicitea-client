@@ -5,14 +5,12 @@ const api = require('./api.js')
 const ui = require('./ui.js')
 const teaApi = require('../teas/api.js')
 const teaUi = require('../teas/ui.js')
-// const showhide = require('./showhide.js')
 
 const onGetReviews = function (event) {
   $('.show-tea').html('')
   $('.create-review').hide()
   $('.see-reviews').hide()
   $('.update-error-msg').hide()
-  console.log('onGetReviews event is', event)
   event.preventDefault()
   api.index()
     .then(ui.getReviewsSuccess)
@@ -39,9 +37,7 @@ const onDeleteReview = function (event) {
   $('.create-review').show()
   $('.see-reviews').show()
   event.preventDefault()
-  console.log('ondelete event is', event)
   const reviewForDelete = $(this).parent().attr('data-id')
-  console.log(reviewForDelete)
   api.destroy(reviewForDelete)
     .then(ui.deleteReviewSuccess)
     .catch(ui.deleteReviewError)
@@ -68,9 +64,7 @@ const onCloseReview = function (event) {
 
 const onUpdateReview = function (event) {
   event.preventDefault()
-  console.log('update review button click', event)
   const data = getFormFields(this)
-  console.log(data)
   api.update(data)
     .then(ui.updateReviewSuccess)
     .catch(ui.updateReviewError)
@@ -88,7 +82,6 @@ const onGetTeas = function (event) {
   $('.see-reviews').hide()
   $('.update-error-msg').hide()
   event.preventDefault()
-  console.log('onselecttea event is', event)
   teaApi.index()
     .then(teaUi.getTeasSuccess)
     .catch(teaUi.getTeasError)
@@ -112,7 +105,6 @@ const onSelectTea = function (event) {
   event.preventDefault()
   $('.see-teas').html('')
   const selectedTeaId = $(this).parent().attr('data-id')
-  console.log('slected tea id is', selectedTeaId)
   teaApi.show(selectedTeaId)
     .then(teaUi.getTeaSuccess)
     .catch(teaUi.getTeaError)
@@ -120,7 +112,6 @@ const onSelectTea = function (event) {
 
 const onSubmitReview = function (event) {
   const data = getFormFields(this)
-  console.log('onSubmitData is', data)
   event.preventDefault()
   api.create(data)
     .then(ui.createReviewSuccess)

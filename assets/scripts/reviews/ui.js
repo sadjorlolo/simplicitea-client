@@ -8,10 +8,8 @@ const editReviewTemplate = require('../templates/edit-review.handlebars')
 
 const getReviewsSuccess = function (data) {
   showhide.seeReviewsClick()
-  console.log('data is', data)
   store.reviews = data.reviews
   const showReviewsHTML = showReviewsTemplate({ reviews: store.reviews })
-  console.log('data.review', store.reviews)
   $('.see-reviews-content').html(showReviewsHTML)
 }
 
@@ -21,7 +19,6 @@ const getReviewsError = function () {
 
 const getReviewSuccess = function (data) {
   $('.see-reviews-content').html('')
-  console.log('getreview data is', data.review)
   const showReviewHTML = showReviewTemplate(data.review)
   $('.see-review-content').html(showReviewHTML)
 }
@@ -30,8 +27,6 @@ const createReviewSuccess = function (data) {
   $('.show-tea').html('')
   getReviewSuccess(data)
   $('.new-created').text('Your review was created successfully!')
-  console.log('create review was a success!')
-  console.log('create review success data is ', data)
 }
 
 const createReviewError = function (data) {
@@ -39,7 +34,6 @@ const createReviewError = function (data) {
   $('.show-tea').html('')
   $('.create-review').show()
   $('.see-reviews').show()
-  console.log('something went wrong writh create review.')
 }
 
 const editReviewSuccess = function (data) {
@@ -53,7 +47,6 @@ const editReviewSuccess = function (data) {
 const editReviewError = function () {
   $('edit-review-msg').show()
   $('edit-review-msg').text('Sorry, cannot retrieve review for edit.')
-  console.log('Edit review did not work. Try again.')
   $('.create-review').show()
   $('.see-reviews').show()
 }
