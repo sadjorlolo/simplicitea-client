@@ -2,6 +2,8 @@
   <button class='close-view-reviews' type='click'>Close reviews</button>
 </div>
 
+{{#if reviews}}
+
 {{#each reviews as |review|}}
 
  <div class='see-review' data-id="{{review.id}}">
@@ -24,3 +26,8 @@
 </div>
 
 {{/each}}
+
+{{else}}
+<div class='no-reviews'>Hmm. Looks like you don't have any reviews yet.</div>
+
+{{/if}}

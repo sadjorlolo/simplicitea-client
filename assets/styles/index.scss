@@ -129,6 +129,10 @@ body {
   text-align: center;
 }
 
+.new-update {
+  text-align: center;
+}
+
 .view-review-notes {
   height: 70px;
   overflow-wrap: break-word;
@@ -330,4 +334,12 @@ body {
 
 .update-error-msg {
   text-align: center;
+}
+
+.no-reviews {
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 25px;
+  color: darken($green, 5%);
 }
