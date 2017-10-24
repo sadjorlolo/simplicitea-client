@@ -294,7 +294,12 @@ body {
     border-radius: 5px;
   }
 
-  .update-input-button {
+  .notes {
+    width: 100%;
+    height: 50px;
+  }
+
+  .new-review-button {
     width: 100%;
     background-color: $purple;
     color: $lightpink;
@@ -302,4 +307,12 @@ body {
     border-radius: 5px;
     margin-top: 5px;
   }
+}
+
+.view-review-notes {
+  overflow-wrap: break-word;
+}
+
+.steep-time {
+  width: 50px;
 }

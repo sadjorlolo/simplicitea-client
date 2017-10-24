@@ -14,7 +14,7 @@
        <option value='Iced'>Iced</option>
      </select>
      </h4>
-     <h4> Steep Time:
+     <h4> Steep Time (in minutes):
        <input type='text' class='steep-time' name='review[steep_time]' value="{{steep_time}}">
      </h4>
      <h4> Rating:
@@ -27,7 +27,7 @@
        </select>
      </h4>
      <h4>Notes: </h4>
-     <input type='text' class='notes' name='review[notes]' value="{{notes}}">
+     <textarea cols='32' wrap='soft' rows='3' class='notes' name='review[notes]'>{{notes}}</textarea>
      <input type='submit' class='update-input-button' name='submit' value='Update Review'>
    </fieldset>
  </form>
