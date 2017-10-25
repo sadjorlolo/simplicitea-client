@@ -17,10 +17,9 @@ const getReviewsError = function () {
   $('.see-reviews-content').text('Sorry, review retrieval did not work.')
 }
 
-// just a test
 const insertCuppa = function (rating) {
   for (let i = 0; i < rating; i++) {
-    $('.cuppa').append("<img src=")
+    $('.cuppa').append("<img src='https://raw.githubusercontent.com/sadjorlolo/simplicitea-client/cuppa/images/cuppa.png'>")
   }
 }
 
@@ -28,6 +27,7 @@ const getReviewSuccess = function (data) {
   $('.see-reviews-content').html('')
   const showReviewHTML = showReviewTemplate(data.review)
   $('.see-review-content').html(showReviewHTML)
+  insertCuppa(data.review.rating)
 }
 
 const createReviewSuccess = function (data) {
@@ -93,5 +93,6 @@ module.exports = {
   editReviewSuccess,
   editReviewError,
   updateReviewSuccess,
-  updateReviewError
+  updateReviewError,
+  insertCuppa
 }
