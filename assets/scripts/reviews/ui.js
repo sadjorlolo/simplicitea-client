@@ -17,6 +17,13 @@ const getReviewsError = function () {
   $('.see-reviews-content').text('Sorry, review retrieval did not work.')
 }
 
+// just a test
+const insertCuppa = function (rating) {
+  for (let i = 0; i < rating; i++) {
+    $('.cuppa').append("<img src=")
+  }
+}
+
 const getReviewSuccess = function (data) {
   $('.see-reviews-content').html('')
   const showReviewHTML = showReviewTemplate(data.review)
