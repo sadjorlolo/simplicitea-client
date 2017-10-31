@@ -53,6 +53,7 @@ const signOutSuccess = function (data) {
 }
 
 const signOutFailure = function () {
+  $('.sign-out-auth-msg-box').fadeIn(5)
   $('.sign-out-auth-msg-box').text('Sign out failed.')
 }
 

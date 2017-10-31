@@ -13,7 +13,7 @@ const clearSignUp = function () {
   $('.signup_email').val('')
   $('.signup_pswd').val('')
   $('.signup_conf').val('')
-  $('.sign-out-auth-msg-box')
+  $('.sign-out-auth-msg-box').val('')
 }
 
 const clearSignIn = function () {
