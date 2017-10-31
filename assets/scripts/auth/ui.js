@@ -10,6 +10,7 @@ const signUpSuccess = function (data) {
 }
 
 const signUpFailure = function () {
+  $('.sign-up-auth-msg-box').fadeIn(3)
   $('.sign-up-auth-msg-box').text('Sign up failed. Please try again.')
   showhide.clearSignUp()
 }
