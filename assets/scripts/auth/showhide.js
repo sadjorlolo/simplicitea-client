@@ -13,14 +13,17 @@ const clearSignUp = function () {
   $('.signup_email').val('')
   $('.signup_pswd').val('')
   $('.signup_conf').val('')
-  $('.sign-out-auth-msg-box').val('')
+  $('.sign-out-auth-msg-box').text('')
+  $('.sign-in-auth-msg-box').text('')
+  // $('.sign-out-auth-msg-box').text('')
 }
 
 const clearSignIn = function () {
   $('.signin_email').val('')
   $('.signin_pswd').val('')
-  $('.sign-in-auth-msg-box').val('')
-  $('.sign-up-auth-msg-box').val('')
+  $('.sign-in-auth-msg-box').text('')
+  $('.sign-up-auth-msg-box').text('')
+  $('.sign-out-auth-msg-box').text('')
 }
 
 const clearPassword = function () {

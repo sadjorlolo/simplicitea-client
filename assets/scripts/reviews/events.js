@@ -7,6 +7,7 @@ const teaApi = require('../teas/api.js')
 const teaUi = require('../teas/ui.js')
 
 const onGetReviews = function (event) {
+  $('.pswd-msg-box').text('')
   $('.show-tea').html('')
   $('.create-review').hide()
   $('.see-reviews').hide()
@@ -18,12 +19,14 @@ const onGetReviews = function (event) {
 }
 
 const onCancelView = function (event) {
+  $('.pswd-msg-box').text('')
   $('.see-reviews-content').html('')
   $('.create-review').show()
   $('.see-reviews').show()
 }
 
 const onGetReview = function (event) {
+  $('.pswd-msg-box').text('')
   event.preventDefault()
   const selectedReviewId = $(this).parent().attr('data-id')
   api.show(selectedReviewId)
@@ -32,6 +35,7 @@ const onGetReview = function (event) {
 }
 
 const onDeleteReview = function (event) {
+  $('.pswd-msg-box').text('')
   $('.new-update').text('')
   $('.new-created').text('')
   $('.create-review').show()
@@ -44,6 +48,7 @@ const onDeleteReview = function (event) {
 }
 
 const onEditReview = function (event) {
+  $('.pswd-msg-box').text('')
   $('.new-update').text('')
   $('.new-created').text('')
   event.preventDefault()
@@ -54,6 +59,7 @@ const onEditReview = function (event) {
 }
 
 const onCloseReview = function (event) {
+  $('.pswd-msg-box').text('')
   $('.new-update').text('')
   $('.new-created').text('')
   event.preventDefault()
@@ -63,6 +69,7 @@ const onCloseReview = function (event) {
 }
 
 const onUpdateReview = function (event) {
+  $('.pswd-msg-box').text('')
   event.preventDefault()
   const data = getFormFields(this)
   api.update(data)
@@ -71,6 +78,7 @@ const onUpdateReview = function (event) {
 }
 
 const onCancelUpdate = function (event) {
+  $('.pswd-msg-box').text('')
   event.preventDefault()
   $('.update-review-content').html('')
   $('.create-review').show()
@@ -78,6 +86,7 @@ const onCancelUpdate = function (event) {
 }
 
 const onGetTeas = function (event) {
+  $('.pswd-msg-box').text('')
   $('.create-review').hide()
   $('.see-reviews').hide()
   $('.update-error-msg').hide()
@@ -88,6 +97,7 @@ const onGetTeas = function (event) {
 }
 
 const onCancelCreate = function (event) {
+  $('.pswd-msg-box').text('')
   event.preventDefault()
   $('.see-teas').html('')
   $('.create-review').show()
@@ -95,6 +105,7 @@ const onCancelCreate = function (event) {
 }
 
 const onCancelReview = function (event) {
+  $('.pswd-msg-box').text('')
   event.preventDefault()
   $('.show-tea').html('')
   $('.create-review').show()
@@ -102,6 +113,7 @@ const onCancelReview = function (event) {
 }
 
 const onSelectTea = function (event) {
+  $('.pswd-msg-box').text('')
   event.preventDefault()
   $('.see-teas').html('')
   const selectedTeaId = $(this).parent().attr('data-id')
@@ -111,6 +123,7 @@ const onSelectTea = function (event) {
 }
 
 const onSubmitReview = function (event) {
+  $('.pswd-msg-box').text('')
   const data = getFormFields(this)
   event.preventDefault()
   api.create(data)
