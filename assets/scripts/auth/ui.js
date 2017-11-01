@@ -4,13 +4,11 @@ const store = require('../store.js')
 const showhide = require('./showhide.js')
 
 const signUpSuccess = function (data) {
-  // $('.sign-up-auth-msg-box').fadeIn(3)
-  $('.sign-up-auth-msg-box').text('Sign up successful!')// .fadeOut(3000)
+  $('.sign-up-auth-msg-box').text('Sign up successful!')
   showhide.clearSignUp()
 }
 
 const signUpFailure = function () {
-  // $('.sign-up-auth-msg-box').fadeIn(3)
   $('.sign-up-auth-msg-box').text('Sign up failed. Please try again.')
   showhide.clearSignUp()
 }
@@ -28,24 +26,22 @@ const signInFailure = function () {
 }
 
 const changePasswordSuccess = function (data) {
-  // $('.pswd-msg-box').fadeIn(5)
   $('.pswd-msg-box').text('')
-  $('.pswd-msg-box').text('Changed password successfully!')// .fadeOut(5000)
+  $('.pswd-msg-box').text('Changed password successfully!')
   showhide.clearPassword()
 }
 
 const changePasswordFailure = function () {
   $('.pswd-msg-box').fadeIn(5)
   $('.pswd-msg-box').text('')
-  $('.pswd-msg-box').text('Change Password failed.')// .fadeOut(5000)
+  $('.pswd-msg-box').text('Change Password failed.')
   showhide.clearPassword()
 }
 
 const signOutSuccess = function (data) {
   $('.new-update').text('')
   $('.new-created').text('')
-  // $('.sign-out-auth-msg-box').fadeIn(5)
-  $('.sign-out-auth-msg-box').text('Signed out successfully!')// .fadeOut(5000)
+  $('.sign-out-auth-msg-box').text('Signed out successfully!')
   store.user = null
   showhide.signOutShowHide()
   showhide.signOutClearMessage()
@@ -53,7 +49,6 @@ const signOutSuccess = function (data) {
 }
 
 const signOutFailure = function () {
-  // $('.sign-out-auth-msg-box').fadeIn(5)
   $('.sign-out-auth-msg-box').text('Sign out failed.')
 }
 

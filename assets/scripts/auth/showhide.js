@@ -15,7 +15,6 @@ const clearSignUp = function () {
   $('.signup_conf').val('')
   $('.sign-out-auth-msg-box').text('')
   $('.sign-in-auth-msg-box').text('')
-  // $('.sign-out-auth-msg-box').text('')
 }
 
 const clearSignIn = function () {
