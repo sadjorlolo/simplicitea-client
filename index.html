@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>simplici&#9824;tea</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body class="container-fluid">
+
+      <!-- Authentication. Do Not Change! -->
+      <div class='signindiv'>
+      <h4 class='sign-in-as'></h4>
+      <form class="sign-in user-info">
+        <fieldset>
+          <input class='signin_email auth-input'type="text" name="credentials[email]" placeholder="Enter Email">
+          <input class='signin_pswd auth-input'type="password" name="credentials[password]" placeholder="Enter Password">
+          <input class='auth-button auth-input' type="submit" name="submit" value="Sign in">
+        </fieldset>
+        <div class='sign-in-auth-msg-box'></div>
+      </form>
+    </div>
+
+      <div class='page-title'>simplici<span>&#9824;</span>tea</div>
+
+      <form class="sign-up user-info">
+      <div class='auth-header'>Don't have an account yet? Sign Up!</div>
+        <fieldset>
+          <input class='signup_email auth-input' type="text" name="credentials[email]" placeholder="Enter Email">
+          <input class='signup_pswd auth-input' type="password" name="credentials[password]" placeholder="Enter Password">
+          <input class='signup_conf auth-input' type="password" name="credentials[password_confirmation]" placeholder="Confirm Password">
+          <input class='auth-button auth-input' type="submit" name="submit" value="Sign up">
+        </fieldset>
+        <div class='sign-up-auth-msg-box'></div>
+      </form>
+
+      <form class="change-pswd">
+        <fieldset>
+          <input class='pswd_old' type="password" name="passwords[old]" placeholder="Enter Old Password">
+          <input class='pswd_new' type="password" name="passwords[new]" placeholder="Enter New Password">
+          <input class='auth-button' type="submit" name="submit" value="Change Password">
+        </fieldset>
+        <div class='pswd-msg-box'></div>
+      </form>
+
+      <form class="sign-out">
+        <fieldset>
+          <input class='auth-button' type="submit" name="submit" value="Sign out">
+        </fieldset>
+      </form>
+      <div class='sign-out-auth-msg-box'></div>
+
+      <!-- End of Authentication -->
+
+      <div class='new-created'></div>
+      <div class='new-update'></div>
+
+      <div class='landing-buttons'>
+      <form class='create-review'>
+        <fieldset>
+          <input class='create-button' type='submit' name='submit' value='Create a New Review'>
+        </fieldset>
+      </form>
+
+      <form class='see-reviews'>
+        <fieldset>
+          <input class='index-button' type='submit' name='submit' value='See All Your Reviews'>
+        </fieldset>
+      </form>
+    </div>
+
+      <div class='see-reviews-content'></div>
+      <div class='see-review-content'></div>
+      <div class='delete-review-msg'></div>
+      <div class='update-review-content'></div>
+      <div class='edit-review-msg'></div>
+      <div class='update-error-msg'></div>
+
+
+      <div class='see-teas'></div>
+      <div class='show-tea'></div>
+
+    </body>
+</html>
